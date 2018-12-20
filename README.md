@@ -1,4 +1,4 @@
-# dokuwik-anchor
+# dokuwiki-anchor
 Anchor plugin for DokuWiki
 
 Documentation: https://www.dokuwiki.org/plugin:anchor
