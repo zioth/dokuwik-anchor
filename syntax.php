@@ -13,7 +13,7 @@ class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 		return array(
 			'author' => 'Eli Fenton',
 			'name' => 'Anchor Plugin',
-			'date' => '2013-08-16',
+			'date' => '2018-12-20',
 			'url' => 'http://dokuwiki.org/plugin:anchor',
 			'desc' => 'Add HTML anchors to a page'
 		);
