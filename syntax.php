@@ -1,7 +1,7 @@
 <?php
 if(!defined('DOKU_INC')) define('DOKU_INC',realpath(dirname(__FILE__).'/../../').'/');
 if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
-require_once(DOKU_PLUGIN.'syntax.php');
+//require_once(DOKU_PLUGIN.'syntax.php');
 
 class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 {
@@ -11,9 +11,10 @@ class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 
 	function getInfo() {
 		return array(
+			'base' => 'anchor',
 			'author' => 'Eli Fenton',
 			'name' => 'Anchor Plugin',
-			'date' => '2018-12-20',
+			'date' => '2023-08-14',
 			'url' => 'http://dokuwiki.org/plugin:anchor',
 			'desc' => 'Add HTML anchors to a page'
 		);
@@ -28,6 +29,7 @@ class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 	}
 
 	function render($mode, Doku_Renderer $renderer, $data) {
-		$renderer->doc .= '<a name="' . $data[0] . '">' . $data[1] . '</a>';
+		$content = array_key_exists(1, $data) ? $data[1] : '';
+		$renderer->doc .= '<a name="' . $data[0] . '">' . $content . '</a>';
 	}
 }
