@@ -1,24 +1,9 @@
 <?php
-if(!defined('DOKU_INC')) define('DOKU_INC',realpath(dirname(__FILE__).'/../../').'/');
-if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
-//require_once(DOKU_PLUGIN.'syntax.php');
-
 class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 {
 	function getType() {return 'substition';}
 	function getPType() {return 'block';}
 	function getSort() {return 167;}
-
-	function getInfo() {
-		return array(
-			'base' => 'anchor',
-			'author' => 'Eli Fenton',
-			'name' => 'Anchor Plugin',
-			'date' => '2023-08-14',
-			'url' => 'http://dokuwiki.org/plugin:anchor',
-			'desc' => 'Add HTML anchors to a page'
-		);
-	}
 
 	function connectTo($mode){
 		$this->Lexer->addSpecialPattern('\{\{anchor:[^}]*\}\}', $mode, 'plugin_anchor');
