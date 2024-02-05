@@ -10,7 +10,7 @@ class syntax_plugin_anchor extends DokuWiki_Syntax_Plugin
 	}
 
 	function handle($match, $state, $pos, Doku_Handler $handler) {
-		preg_match('/^\{\{anchor:(.*)(?::(.*))?}}$/ui', $match, $result);
+		preg_match('/^\{\{anchor:([^:}]*)(?::([^}]*))?}}$/ui', $match, $result);
 		return $result;
 	}
 
