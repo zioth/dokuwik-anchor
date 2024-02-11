@@ -1,6 +1,6 @@
 base    anchor
 author  Eli Fenton
-email
+email   undisclosed@undisclosed.undisclosed
 date    2024-02-05
 name    Anchor Plugin
 desc    Create an HTML anchor.
